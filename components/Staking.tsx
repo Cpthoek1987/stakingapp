@@ -78,7 +78,7 @@ export const Staking = () => {
                     margin: "20px 0",
                     width: "100%"
                 }}>
-                    <h2 style={{ marginRight: "20px"}}>Claim NFT to Stake</h2>
+                    <h2 style={{ marginRight: "20px"}}>Mint NFT to Stake</h2>
                     <TransactionButton
                         transaction={() => (
                             claimTo({
@@ -88,7 +88,7 @@ export const Staking = () => {
                             })
                         )}
                         onTransactionConfirmed={() => {
-                            alert("NFT claimed!");
+                            alert("NFT Minted!");
                             getOwnedNFTs();
                         }}
                         style={{
@@ -98,7 +98,7 @@ export const Staking = () => {
                             padding: "10px 20px",
                             borderRadius: "10px",
                         }}
-                    >Claim NFT</TransactionButton>
+                    >Mint NFT</TransactionButton>
                 </div>
                 <hr style={{
                     width: "100%",
