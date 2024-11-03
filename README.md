@@ -37,7 +37,7 @@ yarn install
 
 
 ### Video Tutorial
-
+okdoki
 For a detailed setup and deployment guide, watch our video tutorial on YouTube:
 
 [How to Build an NFT Staking App - Stake ERC-721 and Earn ERC-20](https://youtu.be/IsE4DYDuC_0)
