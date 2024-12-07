@@ -1,4 +1,4 @@
-import { ConnectEmbed } from "@/app/thirdweb";
+import { ConnectEmbed } from "thirdweb/react";
 import { client } from "./client";
 import { chain } from "./chain";
 import { Staking } from "../../components/Staking";
@@ -9,10 +9,15 @@ export default function Home() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      margin: "20px auto",
-      width: "500px",
+      margin: "0",
+      width: "100%",
+      padding: "20px"
     }}>
-      <h1>ERC-721 Staking App</h1>
+      <h1 style={{ 
+        fontSize: "24px",
+        marginBottom: "20px",
+        textAlign: "center"
+      }}>Welcome at the ChillingChiliz HUB</h1>
       <ConnectEmbed
         client={client}
         chain={chain}
