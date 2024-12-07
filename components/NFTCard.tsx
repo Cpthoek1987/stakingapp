@@ -5,6 +5,7 @@ import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { useState } from "react";
 import { approve } from "thirdweb/extensions/erc721";
 import { NFTModal } from "./NFTModal";
+import {getNFTDownloadLink} from '../utils/nftDownloadLinks'
 
 type OwnedNFTsProps = {
     nft: NFT;
@@ -21,7 +22,7 @@ export const NFTCard = ({ nft, refetch, refecthStakedInfo, isStaked = false }: O
     const handleDownload = () => {
         const nftNumber = nft.metadata.name?.split("#")[1];
         if (nftNumber) {
-            window.open(`https://placeholder-download-link/nft-${nftNumber}`, '_blank');
+            window.open(getNFTDownloadLink(nftNumber), '_blank');
         }
     };
 
