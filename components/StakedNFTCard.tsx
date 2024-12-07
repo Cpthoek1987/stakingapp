@@ -2,11 +2,13 @@ import { MediaRenderer, TransactionButton, useReadContract } from "thirdweb/reac
 import { NFT_CONTRACT, STAKING_CONTRACT } from "../utils/contracts";
 import { getNFT } from "thirdweb/extensions/erc721";
 import { client } from "../src/app/client";
-import { prepareContractCall } from "thirdweb";
+import { NFT,prepareContractCall } from "thirdweb";
 import { useState } from "react";
 import { NFTModal } from "./NFTModal";
+import {getNFTDownloadLink} from '../utils/nftDownloadLinks'
 
 type StakedNFTCardProps = {
+    nft: NFT;
     tokenId: bigint;
     refetchStakedInfo: () => void;
     refetchOwnedNFTs: () => void;
@@ -25,7 +27,7 @@ export const StakedNFTCard: React.FC<StakedNFTCardProps> = ({ tokenId, refetchSt
     const handleDownload = () => {
         const nftNumber = nft?.metadata.name?.split("#")[1];
         if (nftNumber) {
-            window.open(`https://placeholder-download-link/nft-${nftNumber}`, '_blank');
+            window.open(getNFTDownloadLink(nftNumber), '_blank');
         }
     };
     
