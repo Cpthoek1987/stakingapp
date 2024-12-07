@@ -1139,10 +1139,10 @@ export const getNFTDownloadLink = (nftNumber: string): string => {
 };
 
 // Example usage:
-try {
-    console.log(getNFTDownloadLink("171")); // Correct ID
-    console.log(getNFTDownloadLink("55")); // Correct ID
-    console.log(getNFTDownloadLink("9999")); // Invalid ID
-} catch (error) {
-    console.error(error.message);
-}
+// try {
+//     console.log(getNFTDownloadLink("171")); // Correct ID
+//     console.log(getNFTDownloadLink("55")); // Correct ID
+//     console.log(getNFTDownloadLink("1110")); // Invalid ID
+// } catch (error) {
+//     console.error(error.message);
+// }
