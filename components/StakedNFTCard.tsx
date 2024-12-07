@@ -8,7 +8,6 @@ import { NFTModal } from "./NFTModal";
 import {getNFTDownloadLink} from '../utils/nftDownloadLinks'
 
 type StakedNFTCardProps = {
-    nft: NFT;
     tokenId: bigint;
     refetchStakedInfo: () => void;
     refetchOwnedNFTs: () => void;
